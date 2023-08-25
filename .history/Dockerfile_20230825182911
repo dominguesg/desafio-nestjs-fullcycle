@@ -6,6 +6,7 @@ WORKDIR /home/node/app
 
 USER node
 
-#CMD [ "tail", "-f", "/dev/null" ]
+RUN apt-get update
+RUN apt-get install libssl-dev
 
-CMD ["npm", "run", "start:dev"]
+CMD [ "tail", "-f", "/dev/null" ]

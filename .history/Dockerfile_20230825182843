@@ -1,0 +1,10 @@
+FROM node:20-slim
+
+WORKDIR /home/node/app
+
+USER node
+
+RUN apt-get update
+RUN sudo apt-get install libssl-dev
+
+CMD [ "tail", "-f", "/dev/null" ]
